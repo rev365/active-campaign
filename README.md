@@ -79,7 +79,7 @@ from active_campaign import ACClient
 client = ACClient(account='rev365', api_token='sampleapitoken')
 ```
 
-### Contact
+### ACContact
 
 ACContacts represent the people that the owner of an ActiveCampaign account is marketing to or selling to.
 
