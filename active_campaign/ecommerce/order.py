@@ -31,7 +31,7 @@ class ACProduct(object):
         image_url=None
     ):
         self.name = name
-        self.price = price
+        self.price = str(price).replace('.', '')
         self.quantity = quantity
         self.external_id = external_id
         self.category = category
@@ -121,7 +121,7 @@ class ACOrder(object):
                 'email': email,
                 'orderProducts': [product.to_dict() for product in products],
                 'currency': currency,
-                'totalPrice': total_price,
+                'totalPrice': str(total_price).replace('.', ''),
                 'orderDate': str(order_date),
                 'orderNumber': order_number,
                 'orderUrl': order_url,
@@ -186,7 +186,7 @@ class ACOrder(object):
                 'email': email,
                 'orderProducts': [product.to_dict() for product in products],
                 'currency': currency,
-                'totalPrice': total_price,
+                'totalPrice': str(total_price).replace('.', ''),
                 'abandonedDate': str(abandoned_date),
                 'externalCreatedDate': str(external_created_date),
                 'orderNumber': order_number,
